@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="a" x1="0" x2="1"><stop offset="0" stop-color="#6E72FC"/><stop offset="1" stop-color="#AD1DEB"/></linearGradient>
+    <linearGradient id="b" x1="0" x2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#34D399"/></linearGradient>
+    <linearGradient id="c" x1="0" x2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#60A5FA"/></linearGradient>
+    <linearGradient id="d" x1="0" x2="1"><stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#FBBF24"/></linearGradient>
+    <style>.card{fill:#fff;stroke:#e5e7eb}.title{font:bold 16px Poppins,Arial}.small{font:12px Poppins,Arial}</style>
+  </defs>
+  <rect width="900" height="520" fill="#fff"/>
+  <rect x="20" y="20" width="860" height="40" rx="8" fill="#111827"/>
+  <circle cx="40" cy="40" r="6" fill="#ef4444"/><circle cx="60" cy="40" r="6" fill="#f59e0b"/><circle cx="80" cy="40" r="6" fill="#22c55e"/>
+  <text x="110" y="46" fill="#e5e7eb" class="small">ContextEQ Demo</text>
+  <rect x="20" y="80" width="540" height="260" rx="12" class="card"/>
+  <text x="40" y="108" class="title" fill="#111827">Resonance Over Time</text>
+  <polyline points="40,300 110,250 180,260 250,210 320,230 390,190 460,220 520,170" fill="none" stroke="url(#a)" stroke-width="6"/>
+  <polyline points="40,280 110,240 180,250 250,200 320,210 390,180 460,190 520,160" fill="none" stroke="url(#b)" stroke-width="6" opacity=".6"/>
+  <rect x="580" y="80" width="300" height="260" rx="12" class="card"/>
+  <text x="600" y="108" class="title" fill="#111827">EQ Breakdown</text>
+  <g class="small" fill="#374151">
+    <text x="600" y="140">Joy</text><rect x="660" y="132" width="180" height="8" fill="#e5e7eb" rx="4"/><rect x="660" y="132" width="130" height="8" fill="url(#a)" rx="4"/>
+    <text x="600" y="170">Trust</text><rect x="660" y="162" width="180" height="8" fill="#e5e7eb" rx="4"/><rect x="660" y="162" width="110" height="8" fill="url(#b)" rx="4"/>
+    <text x="600" y="200">Surprise</text><rect x="660" y="192" width="180" height="8" fill="#e5e7eb" rx="4"/><rect x="660" y="192" width="85" height="8" fill="url(#c)" rx="4"/>
+    <text x="600" y="230">Risk</text><rect x="660" y="222" width="180" height="8" fill="#e5e7eb" rx="4"/><rect x="660" y="222" width="40" height="8" fill="url(#d)" rx="4"/>
+  </g>
+  <rect x="20" y="360" width="275" height="120" rx="12" class="card"/><text x="40" y="388" class="small" fill="#6b7280">Persona</text><text x="40" y="415" class="title" fill="#111827">Gen Z (18–24)</text><text x="40" y="440" class="small" fill="#059669">+22% CTR</text>
+  <rect x="315" y="360" width="275" height="120" rx="12" class="card"/><text x="335" y="388" class="small" fill="#6b7280">Channel</text><text x="335" y="415" class="title" fill="#111827">TikTok / Reels</text><text x="335" y="440" class="small" fill="#059669">+18% VTR</text>
+  <rect x="610" y="360" width="270" height="120" rx="12" class="card"/><text x="630" y="388" class="small" fill="#6b7280">Risk</text><text x="630" y="415" class="title" fill="#111827">Low</text><text x="630" y="440" class="small" fill="#374151">Brand‑safe</text>
+</svg>
