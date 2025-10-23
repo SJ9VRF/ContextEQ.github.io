@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ContextEQ — Homepage</title>
+  <title>ContextEQ — Website</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--c1:#4F46E5;--c2:#AD1DEB;--c3:#0EA5E9;--c4:#22D3EE}
+    :root{--c1:#4F46E5;--c2:#AD1DEB;--c3:#0EA5E9;--c4:#22D3EE;--amber:#F59E0B;--green:#10B981;--rose:#E11D48}
     body{font-family:'Poppins',sans-serif;background:#f9fafb}
     .grad-1{background:linear-gradient(135deg,var(--c1),var(--c2))}
+    .grad-2{background:linear-gradient(135deg,#0EA5E9,#22D3EE)}
+    .grad-3{background:linear-gradient(135deg,#F59E0B,#FBBF24)}
+    .grad-4{background:linear-gradient(135deg,#10B981,#34D399)}
+    .grad-5{background:linear-gradient(135deg,#EC4899,#F472B6)}
     .text-grad{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    #sidebar{width:18rem}
+    #sidebar{width:19rem}
     #contentWrap{padding-left:0}
-    @media(min-width:1024px){ #contentWrap{padding-left:18rem} }
+    @media(min-width:1024px){ #contentWrap{padding-left:19rem} }
     body.sidebar-collapsed #sidebar{transform:translateX(-100%)}
     body.sidebar-collapsed #contentWrap{padding-left:0 !important}
     .section{background:white;border:1px solid #eef2ff;border-radius:1rem;box-shadow:0 10px 30px rgba(2,6,23,.06)}
-    .tag{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
-    .container{max-width:1200px}
     .section-head{display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
-    .section-head .bar{width:10px;height:10px;border-radius:9999px;background:linear-gradient(135deg,var(--c1),var(--c2))}
+    .section-head .dot{width:10px;height:10px;border-radius:9999px;background:linear-gradient(135deg,var(--c1),var(--c2))}
     .chip{display:inline-flex;align-items:center;padding:.25rem .5rem;border-radius:9999px;font-size:.75rem;font-weight:600;border:1px solid #e5e7eb}
+    .ring-indigo{box-shadow:0 10px 30px rgba(79,70,229,.12)}
+    .ring-blue{box-shadow:0 10px 30px rgba(59,130,246,.12)}
+    .ring-green{box-shadow:0 10px 30px rgba(16,185,129,.12)}
+    .ring-amber{box-shadow:0 10px 30px rgba(245,158,11,.12)}
+    .ring-pink{box-shadow:0 10px 30px rgba(236,72,153,.12)}
   </style>
 </head>
 <body class="text-gray-800">
   <header class="grad-1 text-white sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <button id="toggleSidebar" class="px-3 py-2 rounded-lg bg-white text-indigo-700 font-semibold" aria-controls="sidebar" title="Toggle menu">☰</button>
-        <img src="assets/logo-contexteq.svg" alt="ContextEQ logo" class="h-8 w-auto"/>
+        <button id="toggleSidebar" class="px-3 py-2 rounded-lg bg-white text-indigo-700 font-semibold" aria-controls="sidebar" title="Show/Hide menu">☰</button>
+        <img src="assets/logo-contexteq.svg" alt="ContextEQ" class="h-8 w-auto"/>
         <span class="hidden sm:inline font-semibold tracking-wide">ContextEQ</span>
       </div>
-      <nav class="hidden md:flex items-center gap-8 text-sm">
+      <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="index.html#features" class="opacity-90 hover:opacity-100">Features</a>
         <a href="index.html#apps" class="opacity-90 hover:opacity-100">Apps</a>
+        <a href="index.html#usecases" class="opacity-90 hover:opacity-100">Use cases</a>
         <a href="index.html#pricing" class="opacity-90 hover:opacity-100">Pricing</a>
         <a href="investor_deck.html" class="opacity-90 hover:opacity-100">Deck</a>
         <a href="dashboard.html" class="px-3 py-2 bg-white text-indigo-700 rounded-lg font-semibold hover:bg-gray-100">Live Demo</a>
@@ -50,13 +58,16 @@
       </div>
       <button id="closeSidebar" class="lg:hidden text-gray-600 hover:text-gray-900" aria-label="Hide sidebar">✕</button>
     </div>
-    <nav class="p-3 space-y-1 text-sm">
+    <nav class="p-4 space-y-1 text-sm">
       <a href="index.html#features" class="block px-3 py-2 rounded hover:bg-gray-100">Features</a>
       <a href="index.html#apps" class="block px-3 py-2 rounded hover:bg-gray-100">Apps</a>
       <a href="index.html#how" class="block px-3 py-2 rounded hover:bg-gray-100">How it works</a>
       <a href="index.html#integrations" class="block px-3 py-2 rounded hover:bg-gray-100">Integrations</a>
-      <a href="index.html#pricing" class="block px-3 py-2 rounded hover:bg-gray-100">Pricing</a>
+      <a href="index.html#usecases" class="block px-3 py-2 rounded hover:bg-gray-100">Use cases</a>
+      <a href="index.html#platform" class="block px-3 py-2 rounded hover:bg-gray-100">Platform</a>
       <a href="index.html#security" class="block px-3 py-2 rounded hover:bg-gray-100">Security</a>
+      <a href="index.html#customers" class="block px-3 py-2 rounded hover:bg-gray-100">Customers</a>
+      <a href="index.html#pricing" class="block px-3 py-2 rounded hover:bg-gray-100">Pricing</a>
       <a href="index.html#faq" class="block px-3 py-2 rounded hover:bg-gray-100">FAQ</a>
       <a href="investor_deck.html" class="block px-3 py-2 rounded hover:bg-gray-100">Investor Deck</a>
       <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-gray-100">Live Demo</a>
@@ -67,30 +78,211 @@
 
   <div id="contentWrap" class="transition-all duration-300">
     
-<section class='container mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center'>
+<section class="max-w-7xl mx-auto px-6 py-14 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
   <div>
-    <div class='inline-flex items-center space-x-2 bg-white text-indigo-700 px-3 py-1 rounded-full tag mb-4 shadow'>Multimodal Emotional AI</div>
-    <h1 class='text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-gray-900'>Increase Creative ROI with <span class='text-grad'>Emotion Intelligence</span></h1>
-    <p class='text-gray-700 text-lg md:text-xl mb-6'>Score <b>resonance</b> across video, audio, text & images — ship on‑tone campaigns that convert.</p>
-    <ul class='text-gray-700 space-y-2 mb-8'><li>• <b>+10–25% CTR</b></li><li>• <b>−15–30% wasted spend</b></li><li>• <b>Minutes, not weeks</b> to decisions</li></ul>
-    <div class='flex flex-wrap gap-3'><a href='dashboard.html' class='px-6 py-3 rounded-xl grad-1 text-white font-semibold'>Try Live Demo</a><a href='#demo' class='px-6 py-3 rounded-xl border border-gray-300 bg-white font-semibold hover:bg-gray-50'>Request Demo</a><a href='investor_deck.html' class='px-6 py-3 rounded-xl border border-gray-300 bg-white font-semibold hover:bg-gray-50'>Investor Deck</a></div>
-    <p class='text-xs text-gray-400 mt-3'>SOC2-ready • GDPR-friendly • API & Webhooks • SSO/SAML</p>
+    <span class="inline-flex items-center space-x-2 bg-white text-indigo-700 px-3 py-1 rounded-full text-xs font-bold shadow">Multimodal Emotional AI</span>
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4 mb-4 text-gray-900">Boost Creative ROI with <span class="text-grad">Emotion Intelligence</span></h1>
+    <p class="text-gray-700 text-lg md:text-xl mb-6">ContextEQ measures <b>emotional resonance</b> across video, audio, text & images — so you launch on‑tone campaigns that convert.</p>
+    <div class="grid grid-cols-3 gap-3 text-center mb-6">
+      <div class="section p-4 ring-green"><div class="text-xs text-gray-500">CTR</div><div class="text-2xl font-bold text-green-600">+10–25%</div></div>
+      <div class="section p-4 ring-amber"><div class="text-xs text-gray-500">Waste</div><div class="text-2xl font-bold text-yellow-600">−15–30%</div></div>
+      <div class="section p-4 ring-blue"><div class="text-xs text-gray-500">Speed</div><div class="text-2xl font-bold text-blue-600">Minutes → Insight</div></div>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a href="dashboard.html" class="px-6 py-3 rounded-xl grad-1 text-white font-semibold">Live Demo</a>
+      <a href="#contact" class="px-6 py-3 rounded-xl grad-4 text-white font-semibold">Request Demo</a>
+      <a href="investor_deck.html" class="px-6 py-3 rounded-xl grad-3 text-white font-semibold">Investor Deck</a>
+    </div>
+    <p class="text-xs text-gray-400 mt-3">SOC2 • GDPR • API/Webhooks • SSO/SAML</p>
   </div>
-  <div class='section overflow-hidden'><img src='assets/demo-hero.svg' alt='ContextEQ demo overview' class='w-full h-auto'></div>
+  <div class="section overflow-hidden ring-indigo">
+    <img src="assets/demo-hero.svg" alt="ContextEQ Demo" class="w-full h-auto">
+  </div>
 </section>
-<section class='container mx-auto px-6 pb-12'><div class='grid md:grid-cols-3 gap-6'><div class='section p-6'><div class='section-head'><span class='bar'></span><h3 class='text-xl font-semibold text-gray-900'>Lift & Efficiency</h3></div><p class='text-gray-700'>Predictive Resonance improves <b>CTR 10–25%</b> and reduces <b>waste 15–30%</b>.</p></div><div class='section p-6'><div class='section-head'><span class='bar'></span><h3 class='text-xl font-semibold text-gray-900'>Speed to Insight</h3></div><p class='text-gray-700'>Realtime cues replace slow qual cycles.</p></div><div class='section p-6'><div class='section-head'><span class='bar'></span><h3 class='text-xl font-semibold text-gray-900'>Brand Safety</h3></div><p class='text-gray-700'>Flag off‑tone frames & copy pre‑launch.</p></div></div></section>
-<section id='features' class='container mx-auto px-6 py-12 grid md:grid-cols-3 gap-8'><div class='section p-6'><div class='tag text-indigo-600 mb-2'>Realtime</div><h3 class='text-xl font-semibold mb-2 text-gray-900'>Emotion Detection</h3><p class='text-gray-600'>Tone + visual + acoustic cues → joy, trust, fear, anger, surprise & more.</p></div><div class='section p-6'><div class='tag text-pink-600 mb-2'>Multimodal</div><h3 class='text-xl font-semibold mb-2 text-gray-900'>Unified Understanding</h3><p class='text-gray-600'>Fuse video, audio, text & images to capture context.</p></div><div class='section p-6'><div class='tag text-green-600 mb-2'>Predictive</div><h3 class='text-xl font-semibold mb-2 text-gray-900'>Resonance Scoring</h3><p class='text-gray-600'>Persona/channel scores guide creative & tests.</p></div></section>
-<section id='apps' class='container mx-auto px-6 pb-12'><div class='section-head justify-center'><span class='bar'></span><h2 class='text-3xl md:text-4xl font-bold text-center'>ContextEQ Apps</h2></div><div class='grid sm:grid-cols-2 lg:grid-cols-3 gap-8'><div class='section p-6'><h3 class='text-xl font-semibold mb-2 text-gray-900'>AdSenseEQ</h3><p class='text-gray-600 mb-4'>Optimize ad copy & spend with EQ insights.</p><a href='dashboard.html#ad' class='text-indigo-600 font-semibold'>Open in Demo →</a></div><div class='section p-6'><h3 class='text-xl font-semibold mb-2 text-gray-900'>VideoEQ</h3><p class='text-gray-600 mb-4'>Decode facial, vocal & motion cues.</p><a href='dashboard.html#video' class='text-indigo-600 font-semibold'>Open in Demo →</a></div><div class='section p-6'><h3 class='text-xl font-semibold mb-2 text-gray-900'>ContentEQ</h3><p class='text-gray-600 mb-4'>Generate on‑tone content.</p><a href='dashboard.html#content' class='text-indigo-600 font-semibold'>Open in Demo →</a></div><div class='section p-6'><h3 class='text-xl font-semibold mb-2 text-gray-900'>EQGraph</h3><p class='text-gray-600 mb-4'>Map emotion networks.</p><a href='dashboard.html#graph' class='text-indigo-600 font-semibold'>Open in Demo →</a></div><div class='section p-6'><h3 class='text-xl font-semibold mb-2 text-gray-900'>EQ API</h3><p class='text-gray-600 mb-4'>Integrate Emotional AI.</p><a href='dashboard.html#api' class='text-indigo-600 font-semibold'>Open in Demo →</a></div></div></section>
-<section id='how' class='container mx-auto px-6 py-12 grid md:grid-cols-3 gap-8'><div class='section p-6'><h3 class='text-lg font-semibold mb-2 text-gray-900'>1) Ingest</h3><p class='text-gray-600'>Upload/stream via UI/API.</p></div><div class='section p-6'><h3 class='text-lg font-semibold mb-2 text-gray-900'>2) Analyze</h3><p class='text-gray-600'>Multimodal transformer extracts cues.</p></div><div class='section p-6'><h3 class='text-lg font-semibold mb-2 text-gray-900'>3) Act</h3><p class='text-gray-600'>Scores & guidance drive outcomes.</p></div></section>
-<section id='integrations' class='container mx-auto px-6 pb-12'><div class='section p-6'><div class='section-head'><span class='bar'></span><h2 class='text-2xl font-bold text-gray-900'>Integrations</h2></div><p class='text-gray-700 mb-6'>Connect to your stack for ingestion, analytics, and activation. REST & webhooks or categories below:</p><div class='grid md:grid-cols-2 gap-6'><div class='p-4 rounded-lg border bg-white'><div class='flex items-center justify-between mb-3'><h3 class='font-semibold text-gray-900'>Ad & Social Platforms</h3><span class='chip'>Activation</span></div><ul class='text-gray-700 space-y-2 list-disc list-inside'><li>Meta, TikTok, Google Ads</li><li>LinkedIn, YouTube, X</li><li>Export: audience + creative recommendations</li></ul></div><div class='p-4 rounded-lg border bg-white'><div class='flex items-center justify-between mb-3'><h3 class='font-semibold text-gray-900'>Analytics & BI</h3><span class='chip'>Attribution</span></div><ul class='text-gray-700 space-y-2 list-disc list-inside'><li>GA4, Amplitude, Mixpanel</li><li>BigQuery, Snowflake, Redshift</li><li>Push: Resonance & EQ features</li></ul></div><div class='p-4 rounded-lg border bg-white'><div class='flex items-center justify-between mb-3'><h3 class='font-semibold text-gray-900'>Storage / DAM / MAM</h3><span class='chip'>Ingestion</span></div><ul class='text-gray-700 space-y-2 list-disc list-inside'><li>GDrive, S3, GCS, Azure Blob</li><li>Bynder, Cloudinary, Frame.io</li><li>Auto-scan & tag with EQ</li></ul></div><div class='p-4 rounded-lg border bg-white'><div class='flex items-center justify-between mb-3'><h3 class='font-semibold text-gray-900'>Collab & CMS</h3><span class='chip'>Workflow</span></div><ul class='text-gray-700 space-y-2 list-disc list-inside'><li>Figma, Notion, Slack</li><li>WordPress, Contentful, Webflow</li><li>Inline tone suggestions & approvals</li></ul></div></div></div></section>
-<section class='container mx-auto px-6 pb-12'><div class='section p-6'><div class='section-head'><span class='bar'></span><h2 class='text-2xl font-bold text-gray-900'>Case Study — DTC Beauty</h2></div><div class='grid md:grid-cols-3 gap-6'><div class='md:col-span-2'><p class='text-gray-700 mb-3'><b>Goal:</b> Increase paid social ROAS.</p><p class='text-gray-700 mb-3'><b>Action:</b> VideoEQ flagged low‑trust scenes; ContentEQ tuned VO & captions.</p><p class='text-gray-700'><b>Result (6 weeks):</b> CTR <b>+19%</b>, CPA <b>−14%</b>, Shares <b>+11%</b>.</p></div><div class='bg-white border rounded-lg p-4'><div class='text-xs text-gray-500'>Key Metrics</div><div class='mt-2 grid grid-cols-3 gap-3 text-center'><div><div class='text-2xl font-bold text-green-600'>+19%</div><div class='text-xs'>CTR</div></div><div><div class='text-2xl font-bold text-green-600'>−14%</div><div class='text-xs'>CPA</div></div><div><div class='text-2xl font-bold text-green-600'>+11%</div><div class='text-xs'>Shares</div></div></div></div></div></div></section>
-<section id='pricing' class='bg-gray-50'><div class='container mx-auto px-6 py-16 grid md:grid-cols-3 gap-8'><div class='section p-6'><h3 class='text-xl font-semibold text-gray-900'>Starter</h3><p class='text-gray-600 mt-1 mb-6'>For solo creators</p><div class='text-4xl font-bold text-gray-900'>$29<span class='text-base font-normal text-gray-500'>/mo</span></div></div><div class='section p-6 ring-2 ring-indigo-500'><h3 class='text-xl font-semibold text-gray-900'>Pro</h3><p class='text-gray-600 mt-1 mb-6'>For teams</p><div class='text-4xl font-bold text-gray-900'>$149<span class='text-base font-normal text-gray-500'>/mo</span></div></div><div class='section p-6'><h3 class='text-xl font-semibold text-gray-900'>Enterprise</h3><p class='text-gray-600 mt-1 mb-6'>Security & SLAs</p><div class='text-4xl font-bold text-gray-900'>Let’s Talk</div></div></div></section>
-<section id='faq' class='container mx-auto px-6 py-12'><div class='section-head'><span class='bar'></span><h2 class='text-3xl font-bold text-gray-900'>FAQ</h2></div><div class='max-w-3xl space-y-4'><details class='section p-4'><summary class='font-semibold'>What emotions do you detect?</summary><p class='text-gray-600 mt-2'>Joy, trust, surprise, fear, anger, sadness, anticipation & more.</p></details><details class='section p-4'><summary class='font-semibold'>Is my data secure?</summary><p class='text-gray-600 mt-2'>Encryption at rest/in transit, RBAC, enterprise controls.</p></details><details class='section p-4'><summary class='font-semibold'>Can I integrate with my stack?</summary><p class='text-gray-600 mt-2'>Yes — REST API, webhooks & SDKs.</p></details></div></section>
-<section id='contact' class='grad-1 text-white text-center'><div class='container mx-auto px-6 py-16'><h2 class='text-3xl md:text-4xl font-bold mb-3'>Ready to feel the difference?</h2><p class='opacity-90 mb-6'>Request a custom demo tailored to your brand & channels.</p><a href='dashboard.html' class='inline-block px-6 py-3 rounded-xl bg-white text-indigo-700 font-semibold hover:bg-gray-100'>Open Live Demo</a></div></section>
+
+<section class="max-w-7xl mx-auto px-6 pb-10">
+  <div class="section p-5 grad-2 text-white">
+    <div class="flex items-center justify-between flex-wrap gap-4 text-sm font-semibold">
+      <div>Trusted by data‑driven teams</div>
+      <div class="flex gap-3 opacity-90">
+        <span>Fintech</span><span>Retail</span><span>SaaS</span><span>Media</span><span>Gaming</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="max-w-7xl mx-auto px-6 py-12">
+  <div class="section p-6 ring-indigo">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Full Product Capabilities</h2></div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-5 bg-indigo-50 rounded-xl border border-indigo-100">
+        <h3 class="font-bold text-indigo-800 mb-2">Multimodal Emotion Detection</h3>
+        <p class="text-indigo-900 text-sm">Joy/Trust/Surprise/Fear/Anger/Sadness/Calm… from tone, visual and acoustic cues.</p>
+      </div>
+      <div class="p-5 bg-pink-50 rounded-xl border border-pink-100">
+        <h3 class="font-bold text-pink-800 mb-2">Resonance Score</h3>
+        <p class="text-pink-900 text-sm">Persona/channel‑specific scores with response prediction.</p>
+      </div>
+      <div class="p-5 bg-green-50 rounded-xl border border-green-100">
+        <h3 class="font-bold text-green-800 mb-2">Guidance & Tone Control</h3>
+        <p class="text-green-900 text-sm">Actionable suggestions for captions, VO, storyboard, hero image.</p>
+      </div>
+      <div class="p-5 bg-blue-50 rounded-xl border border-blue-100">
+        <h3 class="font-bold text-blue-800 mb-2">Realtime & Batch</h3>
+        <p class="text-blue-900 text-sm">Live streaming + batch processing with queues & webhooks.</p>
+      </div>
+      <div class="p-5 bg-amber-50 rounded-xl border border-amber-100">
+        <h3 class="font-bold text-yellow-800 mb-2">EQGraph</h3>
+        <p class="text-yellow-900 text-sm">Emotion network across campaign components & personas.</p>
+      </div>
+      <div class="p-5 bg-purple-50 rounded-xl border border-purple-100">
+        <h3 class="font-bold text-purple-800 mb-2">API + SDK</h3>
+        <p class="text-purple-900 text-sm">REST, webhooks, client SDKs, logging and tracing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apps" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="section p-6 ring-green">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Applications</h2></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 bg-white border rounded-xl"><h3 class="font-bold mb-2">AdSenseEQ</h3><p class="text-gray-600 mb-3">Pre‑test campaigns, optimize copy/visual/video.</p><a href="dashboard.html#ad" class="text-green-700 font-semibold">Open in Demo →</a></div>
+      <div class="p-6 bg-white border rounded-xl"><h3 class="font-bold mb-2">VideoEQ</h3><p class="text-gray-600 mb-3">Detect facial, vocal & motion cues by scene.</p><a href="dashboard.html#video" class="text-green-700 font-semibold">Open in Demo →</a></div>
+      <div class="p-6 bg-white border rounded-xl"><h3 class="font-bold mb-2">ContentEQ</h3><p class="text-gray-600 mb-3">Rewrite tone, headline & CTA on the fly.</p><a href="dashboard.html#content" class="text-green-700 font-semibold">Open in Demo →</a></div>
+      <div class="p-6 bg-white border rounded-xl"><h3 class="font-bold mb-2">EQGraph</h3><p class="text-gray-600 mb-3">Map emotion relationships across elements.</p><a href="dashboard.html#graph" class="text-green-700 font-semibold">Open in Demo →</a></div>
+      <div class="p-6 bg-white border rounded-xl"><h3 class="font-bold mb-2">EQ API</h3><p class="text-gray-600 mb-3">Integrate Emotional AI into your stack.</p><a href="dashboard.html#api" class="text-green-700 font-semibold">Open in Demo →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="section p-6 ring-blue"><div class="section-head"><span class="dot"></span><h3 class="font-bold">1) Ingest</h3></div><p class="text-gray-700">Upload/stream video, audio, text, images via UI/API, or connect S3/GCS…</p></div>
+    <div class="section p-6 ring-indigo"><div class="section-head"><span class="dot"></span><h3 class="font-bold">2) Analyze</h3></div><p class="text-gray-700">Multimodal backbone extracts emotion signals and context.</p></div>
+    <div class="section p-6 ring-amber"><div class="section-head"><span class="dot"></span><h3 class="font-bold">3) Act</h3></div><p class="text-gray-700">Resonance, guidance and EQGraph flow into creative & spend.</p></div>
+  </div>
+</section>
+
+<section id="integrations" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="section p-6 ring-amber">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Integrations</h2></div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-5 bg-white border rounded-xl">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold">Ad & Social</h3><span class="chip">Activation</span></div>
+        <ul class="text-gray-700 list-disc list-inside space-y-1"><li>Meta, TikTok, Google Ads, LinkedIn, YouTube, X</li><li>Sync audiences & creative recommendations</li></ul>
+      </div>
+      <div class="p-5 bg-white border rounded-xl">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold">Analytics & BI</h3><span class="chip">Attribution</span></div>
+        <ul class="text-gray-700 list-disc list-inside space-y-1"><li>GA4, Amplitude, Mixpanel</li><li>BigQuery, Snowflake, Redshift</li></ul>
+      </div>
+      <div class="p-5 bg-white border rounded-xl">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold">Storage / DAM / MAM</h3><span class="chip">Ingestion</span></div>
+        <ul class="text-gray-700 list-disc list-inside space-y-1"><li>GDrive, S3, GCS, Azure Blob</li><li>Bynder, Cloudinary, Frame.io</li></ul>
+      </div>
+      <div class="p-5 bg-white border rounded-xl">
+        <div class="flex items-center justify-between mb-2"><h3 class="font-bold">Collab & CMS</h3><span class="chip">Workflow</span></div>
+        <ul class="text-gray-700 list-disc list-inside space-y-1"><li>Figma, Notion, Slack</li><li>WordPress, Contentful, Webflow</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="usecases" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="section p-6 ring-pink">
+      <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Use cases (by team)</h2></div>
+      <ul class="text-gray-700 space-y-2 list-disc list-inside">
+        <li><b>Brand/Creative:</b> tone control, pre‑testing, storyboard guidance</li>
+        <li><b>Growth:</b> align ad tone to persona, lower CPA</li>
+        <li><b>Product/UX:</b> analyze reactions to onboarding/education media</li>
+        <li><b>Research:</b> faster EQ insights than traditional qual cycles</li>
+      </ul>
+    </div>
+    <div class="section p-6 ring-green">
+      <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Use cases (by industry)</h2></div>
+      <ul class="text-gray-700 space-y-2 list-disc list-inside">
+        <li><b>Fintech:</b> reduce tone risk in sensitive flows</li>
+        <li><b>Retail & DTC:</b> increase CTR/ROAS in social</li>
+        <li><b>Media:</b> trailers & promos with higher shareability</li>
+        <li><b>SaaS:</b> improve conversion on pricing & onboarding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="platform" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="section p-6 ring-blue">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Platform</h2></div>
+    <div class="grid md:grid-cols-3 gap-6 text-gray-700">
+      <div><h3 class="font-bold mb-1">Scale & Performance</h3><p>Batch/stream, parallel shards, SLAs, queueing & webhooks.</p></div>
+      <div><h3 class="font-bold mb-1">Governance & Control</h3><p>RBAC, SSO/SAML, audit logs, data retention policy.</p></div>
+      <div><h3 class="font-bold mb-1">Model Quality</h3><p>EQ taxonomy + human‑in‑the‑loop + outcome‑driven updates.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="security" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="section p-6 ring-indigo">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Security & Compliance</h2></div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-4 bg-white border rounded-xl"><h3 class="font-bold mb-1">Enterprise Controls</h3><p class="text-gray-700">RBAC, SSO/SAML, audit trails</p></div>
+      <div class="p-4 bg-white border rounded-xl"><h3 class="font-bold mb-1">Privacy</h3><p class="text-gray-700">PII redaction, residency, retention</p></div>
+      <div class="p-4 bg-white border rounded-xl"><h3 class="font-bold mb-1">Compliance</h3><p class="text-gray-700">SOC2 readiness, GDPR</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="customers" class="max-w-7xl mx-auto px-6 pb-12">
+  <div class="section p-6 ring-green">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">Customer outcome</h2></div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <p class="text-gray-700 mb-2"><b>Goal:</b> higher ROAS for Gen Z.</p>
+        <p class="text-gray-700 mb-2"><b>Action:</b> VideoEQ flagged low‑trust scenes; ContentEQ tuned VO & captions toward <i>joy + trust</i>.</p>
+        <p class="text-gray-700"><b>Result (6 weeks):</b> CTR <b>+19%</b>, CPA <b>−14%</b>, Shares <b>+11%</b>.</p>
+      </div>
+      <div class="bg-white border rounded-xl p-4">
+        <div class="text-xs text-gray-500">Key metrics</div>
+        <div class="mt-2 grid grid-cols-3 gap-3 text-center">
+          <div><div class="text-2xl font-bold text-green-600">+19%</div><div class="text-xs">CTR</div></div>
+          <div><div class="text-2xl font-bold text-green-600">−14%</div><div class="text-xs">CPA</div></div>
+          <div><div class="text-2xl font-bold text-green-600">+11%</div><div class="text-xs">Shares</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
+    <div class="section p-6"><h3 class="text-xl font-bold text-gray-900">Starter</h3><p class="text-gray-600 mt-1 mb-6">Solo/Startup</p><div class="text-4xl font-extrabold text-gray-900">$29<span class="text-base font-normal text-gray-500">/mo</span></div></div>
+    <div class="section p-6 ring-2 ring-indigo-500"><h3 class="text-xl font-bold text-gray-900">Pro</h3><p class="text-gray-600 mt-1 mb-6">Growth & Brand teams</p><div class="text-4xl font-extrabold text-gray-900">$149<span class="text-base font-normal text-gray-500">/mo</span></div></div>
+    <div class="section p-6"><h3 class="text-xl font-bold text-gray-900">Enterprise</h3><p class="text-gray-600 mt-1 mb-6">Security & SLAs</p><div class="text-4xl font-extrabold text-gray-900">Let’s Talk</div></div>
+  </div>
+</section>
+
+<section id="faq" class="max-w-7xl mx-auto px-6 py-12">
+  <div class="section p-6 ring-blue">
+    <div class="section-head"><span class="dot"></span><h2 class="text-2xl font-bold text-gray-900">FAQ</h2></div>
+    <div class="grid md:grid-cols-2 gap-4">
+      <details class="section p-4"><summary class="font-semibold">Which emotions do you detect?</summary><p class="text-gray-700 mt-2">Joy, Trust, Surprise, Fear, Anger, Sadness, Calm… configurable.</p></details>
+      <details class="section p-4"><summary class="font-semibold">How is model quality ensured?</summary><p class="text-gray-700 mt-2">Human‑in‑the‑loop, continuous benchmarking, outcome‑driven updates.</p></details>
+      <details class="section p-4"><summary class="font-semibold">Can we integrate with our stack?</summary><p class="text-gray-700 mt-2">Yes — REST + Webhooks + SDKs; sample code & test harness.</p></details>
+      <details class="section p-4"><summary class="font-semibold">Is our data secure?</summary><p class="text-gray-700 mt-2">Encryption, RBAC, SSO/SAML, audit, residency/retention options.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="grad-5 text-white text-center">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold mb-2">Ready to feel the difference?</h2>
+    <p class="opacity-90 mb-6">Request a custom demo tailored to your brand & channels.</p>
+    <a href="dashboard.html" class="inline-block px-6 py-3 rounded-xl bg-white text-pink-700 font-semibold hover:bg-gray-100">Open Live Demo</a>
+  </div>
+</section>
 
   </div>
-
-  
 
   <script>
     const bodyEl = document.body;
