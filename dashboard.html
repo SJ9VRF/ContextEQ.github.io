@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContextEQ — Product Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--c1:#4F46E5;--c2:#AD1DEB;--c3:#0EA5E9;--c4:#22D3EE}
+    body{font-family:'Poppins',sans-serif;background:#f9fafb}
+    .grad-1{background:linear-gradient(135deg,var(--c1),var(--c2))}
+    .text-grad{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    #sidebar{width:18rem}
+    #contentWrap{padding-left:0}
+    @media(min-width:1024px){ #contentWrap{padding-left:18rem} }
+    body.sidebar-collapsed #sidebar{transform:translateX(-100%)}
+    body.sidebar-collapsed #contentWrap{padding-left:0 !important}
+    .section{background:white; border:1px solid #eef2ff; border-radius:1rem; box-shadow:0 10px 30px rgba(2,6,23,.06)}
+    .tag{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+    .container{max-width:1200px}
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Header -->
+  <header class="grad-1 text-white sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- LEFT toggle button -->
+        <button id="toggleSidebar" class="px-3 py-2 rounded-lg bg-white text-indigo-700 font-semibold" aria-controls="sidebar" title="Toggle menu">☰</button>
+        <img src="assets/logo-contexteq.svg" alt="ContextEQ logo" class="h-8 w-auto"/>
+        <span class="hidden sm:inline font-semibold tracking-wide">ContextEQ</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html#features" class="opacity-90 hover:opacity-100">Features</a>
+        <a href="index.html#apps" class="opacity-90 hover:opacity-100">Apps</a>
+        <a href="index.html#pricing" class="opacity-90 hover:opacity-100">Pricing</a>
+        <a href="investor_deck.html" class="opacity-90 hover:opacity-100">Deck</a>
+        <a href="dashboard.html" class="px-3 py-2 bg-white text-indigo-700 rounded-lg font-semibold hover:bg-gray-100">Live Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed inset-y-0 left-0 bg-white border-r shadow-xl transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-40">
+    <div class="h-16 flex items-center justify-between px-4 border-b">
+      <div class="flex items-center gap-2">
+        <img src="assets/logo-contexteq.svg" alt="ContextEQ" class="h-7 w-auto">
+        <span class="font-semibold">ContextEQ</span>
+      </div>
+      <button id="closeSidebar" class="lg:hidden text-gray-600 hover:text-gray-900" aria-label="Hide sidebar">✕</button>
+    </div>
+    <nav class="p-3 space-y-1 text-sm">
+      <a href="index.html#features" class="block px-3 py-2 rounded hover:bg-gray-100">Features</a>
+      <a href="index.html#apps" class="block px-3 py-2 rounded hover:bg-gray-100">Apps</a>
+      <a href="index.html#solutions" class="block px-3 py-2 rounded hover:bg-gray-100">Solutions</a>
+      <a href="index.html#how" class="block px-3 py-2 rounded hover:bg-gray-100">How it works</a>
+      <a href="index.html#integrations" class="block px-3 py-2 rounded hover:bg-gray-100">Integrations</a>
+      <a href="index.html#pricing" class="block px-3 py-2 rounded hover:bg-gray-100">Pricing</a>
+      <a href="index.html#security" class="block px-3 py-2 rounded hover:bg-gray-100">Security</a>
+      <a href="index.html#faq" class="block px-3 py-2 rounded hover:bg-gray-100">FAQ</a>
+      <a href="investor_deck.html" class="block px-3 py-2 rounded hover:bg-gray-100">Investor Deck</a>
+      <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-gray-100">Live Demo</a>
+      <a href="index.html#contact" class="block px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+    </nav>
+  </aside>
+  <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+  <div id="contentWrap" class="transition-all duration-300">
+    
+  <main class="container mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-5 gap-6">
+    <aside class="lg:col-span-1 space-y-4">
+      <div class="section p-4"><div class="text-xs text-gray-400 uppercase tracking-widest mb-2">Personas</div><div class="space-y-3"><label class="flex items-center gap-2"><input type="checkbox" checked> Gen Z</label><label class="flex items-center gap-2"><input type="checkbox" checked> Millennial</label><label class="flex items-center gap-2"><input type="checkbox" checked> Parent</label><label class="flex items-center gap-2"><input type="checkbox"> Professional</label></div></div>
+      <div class="section p-4"><div class="text-xs text-gray-400 uppercase tracking-widest mb-2">Tone Targets</div><div class="flex flex-wrap gap-2"><button class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">Joy</button><button class="px-3 py-1 rounded-full bg-pink-50 text-pink-700 text-sm">Trust</button><button class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm">Surprise</button><button class="px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">Calm</button></div></div>
+    </aside>
+
+    <section class="lg:col-span-4 space-y-6">
+      <div id="ad" class="section p-6"><div class="flex items-center justify-between mb-4"><h2 class="text-xl font-bold text-gray-900">AdSenseEQ — Campaign Pre-Test</h2><span class="tag text-indigo-600">Predictive</span></div><div class="grid md:grid-cols-2 gap-6"><div><label class="text-sm text-gray-600">Ad Headline</label><input class="mt-1 w-full border rounded-lg p-2" placeholder="Your future starts today." /><label class="text-sm text-gray-600 mt-4 block">Description</label><textarea class="mt-1 w-full border rounded-lg p-2" rows="4" placeholder="Short compelling description..."></textarea><button class="mt-3 px-4 py-2 rounded-lg grad-1 text-white">Analyze</button></div><div><div class="grid grid-cols-2 gap-3"><div class="p-3 bg-indigo-50 rounded-lg text-indigo-800">Resonance: <b>82/100</b></div><div class="p-3 bg-pink-50 rounded-lg text-pink-700">Brand Fit: <b>A-</b></div><div class="p-3 bg-blue-50 rounded-lg text-blue-700">Lift Pred.: <b>+18%</b></div><div class="p-3 bg-gray-100 rounded-lg text-gray-800">Risk: <b>Low</b></div></div><div class="mt-4"><div class="h-40 bg-white rounded border"></div></div></div></div></div>
+
+      <div id="video" class="section p-6"><div class="flex items-center justify-between mb-4"><h2 class="text-xl font-bold text-gray-900">VideoEQ — Scene Emotion</h2><span class="tag text-blue-600">Multimodal</span></div><div class="grid md:grid-cols-3 gap-6"><div class="md:col-span-2"><div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">Video Placeholder</div></div><div><div class="space-y-2"><div class="flex items-center justify-between"><span>Joy</span><div class="w-40 bg-gray-200 h-2 rounded"><div class="h-2 bg-green-500 rounded" style="width:66%"></div></div></div><div class="flex items-center justify-between"><span>Trust</span><div class="w-40 bg-gray-200 h-2 rounded"><div class="h-2 bg-indigo-500 rounded" style="width:54%"></div></div></div><div class="flex items-center justify-between"><span>Surprise</span><div class="w-40 bg-gray-200 h-2 rounded"><div class="h-2 bg-blue-500 rounded" style="width:31%"></div></div></div><div class="flex items-center justify-between"><span>Risk</span><div class="w-40 bg-gray-200 h-2 rounded"><div class="h-2 bg-red-500 rounded" style="width:12%"></div></div></div></div></div></div></div>
+
+      <div id="content" class="section p-6"><div class="flex items-center justify-between mb-4"><h2 class="text-xl font-bold text-gray-900">ContentEQ — Tone Control</h2><span class="tag text-pink-600">Generative</span></div><div class="grid md:grid-cols-3 gap-6"><div class="md:col-span-2"><label class="text-sm text-gray-600">Your paragraph</label><textarea class="mt-1 w-full border rounded-lg p-2" rows="5" placeholder="Write any paragraph…"></textarea><div class="flex flex-wrap gap-2 mt-3"><button class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-sm">More Joy</button><button class="px-3 py-1 rounded-full bg-pink-50 text-pink-700 text-sm">More Trust</button><button class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm">Less Risk</button></div><button class="mt-3 px-4 py-2 rounded-lg grad-1 text-white">Rewrite</button></div><div><div class="p-3 bg-gray-50 rounded-lg border"><div class="text-xs text-gray-500 mb-1">Preview</div><p class="text-gray-800">Your re-toned content will appear here with suggested headline and CTA.</p></div></div></div></div>
+
+      <div id="graph" class="section p-6"><div class="flex items-center justify-between mb-4"><h2 class="text-xl font-bold text-gray-900">EQGraph — Emotion Network</h2><span class="tag text-green-600">Insight</span></div><div class="grid md:grid-cols-2 gap-6"><div class="p-4 bg-gray-50 rounded-lg border"><div class="h-60"></div></div><div><ul class="space-y-2 text-gray-700"><li>• Joy ↔ Trust drives higher CTR</li><li>• Risk dampens conversion in Gen Z</li><li>• Surprise boosts shareability</li><li>• Calm tone increases retention</li></ul></div></div></div>
+
+      <div id="api" class="section p-6"><div class="flex items-center justify-between mb-4"><h2 class="text-xl font-bold text-gray-900">EQ API — Quick Start</h2><span class="tag text-gray-700">Developers</span></div><div class="grid md:grid-cols-2 gap-6"><div><pre class="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-auto text-sm"><code>POST /v1/eq/analyze
+Authorization: Bearer &lt;API_KEY&gt;
+
+{{
+  "modality": ["video","audio","text"],
+  "targets": ["joy","trust","risk"],
+  "callback_url": "https://yourapp.com/webhook"
+}}</code></pre></div><div class="space-y-2"><div class="p-3 bg-indigo-50 rounded-lg text-indigo-800">Latency: &lt; 800ms (text) / &lt; 2.5s (video)</div><div class="p-3 bg-pink-50 rounded-lg text-pink-700">Throughput: 50 RPS / shard</div><div class="p-3 bg-blue-50 rounded-lg text-blue-700">Webhooks + SDK</div></div></div></div>
+    </section>
+  </main>
+  <footer class="text-center text-sm text-gray-500 py-8">© 2025 ContextEQ Inc. — Demo UI</footer>
+
+  </div>
+
+  
+
+  <script>
+    // Sidebar toggle (left button). Desktop collapses; mobile is off-canvas.
+    const bodyEl = document.body;
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+    const backdrop = document.getElementById('backdrop');
+    const mq = window.matchMedia('(min-width:1024px)');
+    const isDesktop = () => mq.matches;
+
+    function openMobile() { sidebar.classList.remove('-translate-x-full'); backdrop.classList.remove('hidden'); }
+    function closeMobile() { sidebar.classList.add('-translate-x-full'); backdrop.classList.add('hidden'); }
+    function toggleDesktop() { bodyEl.classList.toggle('sidebar-collapsed'); }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', () => {
+      if (isDesktop()) { toggleDesktop(); }
+      else { sidebar.classList.contains('-translate-x-full') ? openMobile() : closeMobile(); }
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeMobile);
+    if (backdrop) backdrop.addEventListener('click', closeMobile);
+    mq.addEventListener('change', e => { if (e.matches) { closeMobile(); sidebar.classList.remove('-translate-x-full'); } });
+
+    // Modal (index only)
+    const modal = document.getElementById('demoModal');
+    const closeDemo = document.getElementById('closeDemo');
+    if (modal && closeDemo) { closeDemo.addEventListener('click', () => { modal.classList.add('hidden'); modal.classList.remove('flex'); }); }
+    const demoBtn = document.querySelector('a[href="#demo"]');
+    if (modal && demoBtn) { demoBtn.addEventListener('click', e => { e.preventDefault(); modal.classList.remove('hidden'); modal.classList.add('flex'); }); }
+
+    const form = document.getElementById('demoForm');
+    if (form) form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const stamp = new Date().toISOString().replace(/[:.]/g,'-');
+      const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = `contexteq-demo-request-${stamp}.json`; document.body.appendChild(a); a.click(); a.remove();
+      const subject = encodeURIComponent('ContextEQ Demo Request');
+      const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nTeam: ${data.team}\nUse case:\n${data.usecase}`);
+      window.location.href = `mailto:hello@contexteq.ai?subject=${subject}&body=${body}`;
+      const thanks = document.getElementById('demoThanks'); if (thanks) thanks.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

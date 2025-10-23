@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContextEQ — Investor Deck</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--c1:#4F46E5;--c2:#AD1DEB;--c3:#0EA5E9;--c4:#22D3EE}
+    body{font-family:'Poppins',sans-serif;background:#f9fafb}
+    .grad-1{background:linear-gradient(135deg,var(--c1),var(--c2))}
+    .text-grad{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    #sidebar{width:18rem}
+    #contentWrap{padding-left:0}
+    @media(min-width:1024px){ #contentWrap{padding-left:18rem} }
+    body.sidebar-collapsed #sidebar{transform:translateX(-100%)}
+    body.sidebar-collapsed #contentWrap{padding-left:0 !important}
+    .section{background:white; border:1px solid #eef2ff; border-radius:1rem; box-shadow:0 10px 30px rgba(2,6,23,.06)}
+    .tag{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+    .container{max-width:1200px}
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Header -->
+  <header class="grad-1 text-white sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- LEFT toggle button -->
+        <button id="toggleSidebar" class="px-3 py-2 rounded-lg bg-white text-indigo-700 font-semibold" aria-controls="sidebar" title="Toggle menu">☰</button>
+        <img src="assets/logo-contexteq.svg" alt="ContextEQ logo" class="h-8 w-auto"/>
+        <span class="hidden sm:inline font-semibold tracking-wide">ContextEQ</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html#features" class="opacity-90 hover:opacity-100">Features</a>
+        <a href="index.html#apps" class="opacity-90 hover:opacity-100">Apps</a>
+        <a href="index.html#pricing" class="opacity-90 hover:opacity-100">Pricing</a>
+        <a href="investor_deck.html" class="opacity-90 hover:opacity-100">Deck</a>
+        <a href="dashboard.html" class="px-3 py-2 bg-white text-indigo-700 rounded-lg font-semibold hover:bg-gray-100">Live Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed inset-y-0 left-0 bg-white border-r shadow-xl transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-40">
+    <div class="h-16 flex items-center justify-between px-4 border-b">
+      <div class="flex items-center gap-2">
+        <img src="assets/logo-contexteq.svg" alt="ContextEQ" class="h-7 w-auto">
+        <span class="font-semibold">ContextEQ</span>
+      </div>
+      <button id="closeSidebar" class="lg:hidden text-gray-600 hover:text-gray-900" aria-label="Hide sidebar">✕</button>
+    </div>
+    <nav class="p-3 space-y-1 text-sm">
+      <a href="index.html#features" class="block px-3 py-2 rounded hover:bg-gray-100">Features</a>
+      <a href="index.html#apps" class="block px-3 py-2 rounded hover:bg-gray-100">Apps</a>
+      <a href="index.html#solutions" class="block px-3 py-2 rounded hover:bg-gray-100">Solutions</a>
+      <a href="index.html#how" class="block px-3 py-2 rounded hover:bg-gray-100">How it works</a>
+      <a href="index.html#integrations" class="block px-3 py-2 rounded hover:bg-gray-100">Integrations</a>
+      <a href="index.html#pricing" class="block px-3 py-2 rounded hover:bg-gray-100">Pricing</a>
+      <a href="index.html#security" class="block px-3 py-2 rounded hover:bg-gray-100">Security</a>
+      <a href="index.html#faq" class="block px-3 py-2 rounded hover:bg-gray-100">FAQ</a>
+      <a href="investor_deck.html" class="block px-3 py-2 rounded hover:bg-gray-100">Investor Deck</a>
+      <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-gray-100">Live Demo</a>
+      <a href="index.html#contact" class="block px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+    </nav>
+  </aside>
+  <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30"></div>
+
+  <div id="contentWrap" class="transition-all duration-300">
+    
+  <section class="min-h-screen py-12">
+    <div class="container mx-auto px-6 space-y-10">
+      <div class="section p-6 flex items-center justify-between"><img src="assets/logo-contexteq.svg" alt="ContextEQ" class="h-10"><div class="text-sm text-gray-600">October 2025</div></div>
+      <div class="section p-8"><h1 class="text-4xl md:text-5xl font-extrabold text-grad mb-3">ContextEQ — Emotional Intelligence for Brands</h1><p class="text-gray-600 text-lg">Multimodal AI that measures and optimizes brand resonance across ads, video, and content.</p></div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="section p-6" id="slide-problem"><h2 class="text-2xl font-bold mb-3 text-gray-900">Problem</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Billions in creatives with limited read on <b>emotional resonance</b>.</li><li>Qual research is slow & non-scalable; A/B is expensive.</li><li>Most AI ignores true context across modalities.</li></ul></div>
+        <div class="section p-6" id="slide-solution"><h2 class="text-2xl font-bold mb-3 text-gray-900">Solution</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Realtime emotion detection (joy, trust, risk, surprise…)</li><li>Resonance Score per persona/channel</li><li>Actionable guidance & EQGraph insights</li></ul></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="section p-6" id="slide-product"><h2 class="text-2xl font-bold mb-3 text-gray-900">Product</h2><p class="text-gray-700">Apps: AdSenseEQ · VideoEQ · ContentEQ · EQGraph · EQ API.</p></div>
+        <div class="section p-6" id="slide-market"><h2 class="text-2xl font-bold mb-3 text-gray-900">Market</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>SAM: Creative testing & brand measurement</li><li>SOM: Performance marketers & brand teams</li><li>ACV: $20–250k (enterprise), $3–12k (SMB)</li></ul></div>
+        <div class="section p-6" id="slide-biz"><h2 class="text-2xl font-bold mb-3 text-gray-900">Business Model</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>SaaS subscriptions</li><li>Usage-based</li><li>Pro services</li></ul></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="section p-6" id="slide-traction"><h2 class="text-2xl font-bold mb-3 text-gray-900">Traction</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Pilots with design partners</li><li>LOIs in discussion</li><li>Benchmark wins vs sentiment-only</li></ul></div>
+        <div class="section p-6" id="slide-tech"><h2 class="text-2xl font-bold mb-3 text-gray-900">Tech</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Multimodal transformer backbone</li><li>EQ taxonomy + human-in-the-loop</li><li>Outcome-driven model updates</li></ul></div>
+        <div class="section p-6" id="slide-gtm"><h2 class="text-2xl font-bold mb-3 text-gray-900">GTM</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Design partners → case studies</li><li>Integrations & ecosystem</li><li>Content & events</li></ul></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="section p-6" id="slide-competition"><h2 class="text-2xl font-bold mb-3 text-gray-900">Competition</h2><p class="text-gray-700">Positioning vs. sentiment-only & creative-testing vendors.</p></div>
+        <div class="section p-6" id="slide-roadmap"><h2 class="text-2xl font-bold mb-3 text-gray-900">Roadmap</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Q4: Private beta, API v1, partner pilots</li><li>Q1: Enterprise controls (RBAC, audit), SDKs</li><li>Q2: Persona auto-discovery, causal lift models</li></ul></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="section p-6" id="slide-team"><h2 class="text-2xl font-bold mb-3 text-gray-900">Team</h2><p class="text-gray-700">Founders: ML, multimodal AI, ads. Advisors in branding & MLOps.</p></div>
+        <div class="section p-6" id="slide-ask"><h2 class="text-2xl font-bold mb-3 text-gray-900">Ask</h2><ul class="list-disc list-inside space-y-2 text-gray-700"><li>Raising $X for 18–24 months runway</li><li>Team, compute, compliance</li></ul></div>
+      </div>
+      <div class="section p-8 text-center" id="slide-contact"><img src="assets/logo-contexteq.svg" class="h-10 mx-auto mb-4" alt="ContextEQ"><h2 class="text-2xl font-bold mb-2 text-gray-900">Thank you</h2><p class="text-gray-600 mb-4">hello@contexteq.ai · contexteq.ai</p><a href="index.html" class="inline-block px-5 py-3 rounded-xl bg-gray-900 text-white font-semibold">Back to Site</a></div>
+    </div>
+  </section>
+
+  </div>
+
+  
+
+  <script>
+    // Sidebar toggle (left button). Desktop collapses; mobile is off-canvas.
+    const bodyEl = document.body;
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+    const backdrop = document.getElementById('backdrop');
+    const mq = window.matchMedia('(min-width:1024px)');
+    const isDesktop = () => mq.matches;
+
+    function openMobile() { sidebar.classList.remove('-translate-x-full'); backdrop.classList.remove('hidden'); }
+    function closeMobile() { sidebar.classList.add('-translate-x-full'); backdrop.classList.add('hidden'); }
+    function toggleDesktop() { bodyEl.classList.toggle('sidebar-collapsed'); }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', () => {
+      if (isDesktop()) { toggleDesktop(); }
+      else { sidebar.classList.contains('-translate-x-full') ? openMobile() : closeMobile(); }
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeMobile);
+    if (backdrop) backdrop.addEventListener('click', closeMobile);
+    mq.addEventListener('change', e => { if (e.matches) { closeMobile(); sidebar.classList.remove('-translate-x-full'); } });
+
+    // Modal (index only)
+    const modal = document.getElementById('demoModal');
+    const closeDemo = document.getElementById('closeDemo');
+    if (modal && closeDemo) { closeDemo.addEventListener('click', () => { modal.classList.add('hidden'); modal.classList.remove('flex'); }); }
+    const demoBtn = document.querySelector('a[href="#demo"]');
+    if (modal && demoBtn) { demoBtn.addEventListener('click', e => { e.preventDefault(); modal.classList.remove('hidden'); modal.classList.add('flex'); }); }
+
+    const form = document.getElementById('demoForm');
+    if (form) form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const stamp = new Date().toISOString().replace(/[:.]/g,'-');
+      const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = `contexteq-demo-request-${stamp}.json`; document.body.appendChild(a); a.click(); a.remove();
+      const subject = encodeURIComponent('ContextEQ Demo Request');
+      const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nTeam: ${data.team}\nUse case:\n${data.usecase}`);
+      window.location.href = `mailto:hello@contexteq.ai?subject=${subject}&body=${body}`;
+      const thanks = document.getElementById('demoThanks'); if (thanks) thanks.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
